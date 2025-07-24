@@ -1,0 +1,71 @@
+<!--
+1. what is html?
+  hypertext markup language - 
+  hypertext - a link to another page/same page
+  markup - a syntax using tags and attributes - marks up the plain text
+
+2. How web works?
+  client server architecture - client requests a service, the server responds. uses http to communicate
+  http 
+  a simple http request contains  - 
+  GET /index.html HTTP/1.1  - request line 
+
+  Host: leetcode.com
+  Accept-language - en-us
+  Content-type - application/json
+
+  Body - json
+
+  a simple http response contains -
+  HTTP/1.1 200
+  Date
+  content-type - html
+
+  Body
+
+  Once the browser recieves the response, it contructs a DOM - basically it represents the objects/elements of our application
+
+  it reads the references to other resources like images/fonts etc - a separate request is sent for each url to its corresponding server.
+
+  once the browser has all the necessary resources, it renders the document.
+
+  -->
+
+<!DOCTYPE html>
+<!--html 5 doc declaration-->
+<html></html>
+
+<!--self closing tags cannot have a child element, that is why they do not require a closing tag-->
+<!--validators-->
+
+<!--meta elements - used to describe information about the webpage
+for example - charset, viewport, keywords, description etc.
+-->
+
+<!--
+Tags - 
+em
+strong
+
+h1-h6 - most important to least important headings - used to represent heirarchy and not sizes, sizes can be manipulated using css.
+
+html is only for structuring, try to avoid any styling related tags.
+
+entities in html -
+&; - anything written within this is called a html entity used to represent special characters.
+&lt; - less than sign
+&gt;
+&nbsp; - used to create a non-breaking space.
+&copy; 
+
+-->
+
+<!--
+alt attribute on image tag - helps visually impaired people/ they use a screen listener, displays if the image is not loaded. A descriptive text would be more helpful
+-->
+
+
+<!--
+css property - 
+object-fit: cover (crops image to fit in the given width and height to avoid elongating/shortening image which does not look good.)
+-->
