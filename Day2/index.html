@@ -2,27 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , user-scalable=no"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <table border="1">
-    <tr>
-      <th>January</th>
-      <th>February</th>
-      <th>March</th>
-    </tr>
-    <tr>
-      <td>random</td>
-      <td>text</td>
-      <td>something</td>
-    </tr>
-    <tr>
-      <td>another</td>
-      <td colspan="2">random</td>
-    </tr>
-  </table>
-  <video src=""></video>
-  <audio></audio>
+  <body>
+    <a target="_self" href="https://machinelearningworkshop.com">Linked site</a>
+    <table border="1">
+      <tr>
+        <th>January</th>
+        <th>February</th>
+        <th>March</th>
+      </tr>
+      <tr>
+        <td>random</td>
+        <td>text</td>
+        <td>something</td>
+      </tr>
+      <tr>
+        <td>another</td>
+        <td colspan="2">random</td>
+      </tr>
+    </table>
+    <video src=""></video>
+    <audio></audio>
+  </body>
 </html>
+<!--
+why is js included at the end? 
+
+render-blocking nature of js, i.e, while js file is downloaded and rendered, the browser stops parsing the html to build the DOM, which means the user will have delay in viewing the site
+Also, we want to make sure the html exists, before manipulating it using js. 
+-->
+<!--
+defer : html rendering is not blocked during download, but execution starts only after html has fully rendered.
+async: does not block html rendering during download. But execution starts immediately, and blocks html rendering. 
+-->
