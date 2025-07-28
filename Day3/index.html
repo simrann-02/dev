@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" src="css/styles.css" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link
+      rel="alternate"
+      href="https://www.machinelearningworkshop.com/fr/"
+      hreflang="fr-FR"
+    />
+    <link
+      rel="alternate"
+      href="https://www.machinelearningworkshop.com/pt/"
+      hreflang="pt-BR"
+    />
+    <link rel="canonical" href="https://www.machinelearning.com" />
+    <meta http-equiv="content-security-policy" content="default-src https:" />
+    <!--defines the content policy for the browser, restricts only https: resouces to be loaded on the browser-->
+  </head>
+  <body>
+    <h1>Main Page (with iframe)</h1>
+    <!--An iFrame refers to inline frame, which is used to embed another document inside a document-->
+    <iframe src="linkPage.html" allowfullscreen title="Demo Frame"></iframe>
+    <iframe
+      src="https://www.youtube.com/embed/KShnPYN-voI"
+      allow="fullscreen"
+    ></iframe>
+    <!-- <script defer src="scripts/lightswitch.js"></script>-->
+
+    <!--
+    Lazy loading - delaying the loading of non-essential elements to boost up the initial page loading, 
+    seo optimization, reduced bandwidth usage from client perspective.
+    Used for images, videos, js modules- load only when a feature of that module is required, data fetching- infinite scrolling. 
+    -->
+
+    <!--
+    CORS - allows which domains can access the server resources. 
+    -->
+
+
+    <!--
+    Pragma meta directives and named meta directives.
+    Pragma directives have a http-equi attribute
+    Named meta directives - viewport, description, keywords, theme-color
+    -->
+
+    <!--
+    Accessibility Object Model - DOM, CSSOM is created when browser parses the html document. Accessibility object model is used by assitive technologies. 
+
+
+    Assitive technologies depend on accessibility object model which in turn uses the role attribute which is a global attribute for determining the semantics of any html element. Semantic html tags have default roles defined for them. 
+
+    Custom properties are an excellent way of communicating application-specific information via JavaScript. Add custom attributes to elements in the form of data-name and access these through the DOM using dataset[name] on the element in question.
+    -->
+  </body>
+</html>
