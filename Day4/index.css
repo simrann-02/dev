@@ -1,0 +1,159 @@
+/* Intrinsic vs Extrinsic sizing -
+Extrinsic sizing means defining a fixed width/height for the element.
+Intrinsic sizing means making the width/height based on the content of the element using min-width/max-width/overflow properties. 
+ */
+
+ /* Box model - this is how the browser sees every html element - a box. 
+ There are four layers to a box- 
+ 1. Content
+ 2. Padding - scroll bars are here. 
+ 3. Border
+ 4. Margin
+ 
+ Box-sizing : content-box -> this is the default behaviour of user agent style sheets. This means any padding or border added to an html element would in turn increase its width and height. 
+ Box-sizing: border-box -> this is more predictable as the border and padding values will be included within the defined width of the box. 
+ */
+
+ /* HTML Selectors
+ 1. Universal Selector
+ 2. Type Selector
+ 3. Class Selector
+ 4. ID selector
+ 5. Attribute Selector
+ [data-type='primary'] {
+  color: red;
+}
+  [data-type='primary' s] {
+  color: red;
+} --> makes it case sensitive
+
+A href that contains "example.com"
+[href*='example.com'] {
+  color: red;
+}
+
+A href that starts with https
+[href^='https'] {
+  color: green;
+}
+
+A href that ends with .com
+[href$='.com'] {
+  color: blue;
+}
+
+You can group selectors by adding comma to them.
+
+6. Psuedo Selectors 
+Psuedo classes - referred by : 
+a:hover {
+  outline: 1px dotted green;
+}
+p:nth-child(even) {
+  background: floralwhite;
+}
+
+Psuedo elements - they are like elements added using css. Referred by :: -> ::after, ::before 
+
+Your list will now either have red dots, or red numbers
+li::marker {
+  color: red;
+}
+
+
+use to set css for the content that has been highlighted by the user. 
+::selection {
+  background: black;
+  color: white;
+}
+
+7. Complex Selectors 
+
+    1. Descendant Combinator - Select all the child elements of the given parent. For ex- select all strong elements which are children of p elements. These elements can be any child, not just direct child. 
+    p strong {
+      color: blue;
+    }
+    2. adjacent/next Sibling Combinator - You can look for an element that immediately follows another element by using a + character in your selector.
+    .top * + * {
+      margin-top: 1.5em;
+    }
+    3. General/subsequent sibling combinator - targets all the siblings that come after the specified element, not just the next sibling. Uses ~
+    4. Child combinator - direct children (>)
+    5. Compound selectors - selects anchor element with my-class class as well in it. 
+    a.my-class
+
+  */
+
+  /* Psuedo Elements
+
+  ::before and ::after - they create child elements if content property is set. you can only set this psuedo elements that can have child elements. 
+  ::first-letter
+  ::first-line
+  ::backdrop
+  ::marker
+  ::selection
+  ::placeholder
+  ::cue - captions on a video element 
+  video::cue {
+    color: yellow;
+  }
+
+  video::cue(b) {
+    color: red;
+  }
+
+  video::cue(i) {
+    color: lightpink;
+  }
+
+
+  Psuedo Classes - 
+  :invalid - input elements that are invalid 
+  :hover 
+  :active - this state is activated when the element is being interacted with.  for example - button when the user clicks and holds 
+  :focus - any focussable element. like a button/input etc. 
+  :focus-within - if any child element is focussed. 
+  :focus-visible - this is used only when the browser determines that the focus indicator is necessary, for example in the case of keyboard press or assitive technologies. This does not work for pointer events. 
+  :target - use to style the actual target. For example- 
+  <a href="#info></a>
+  #info:target{
+    color:red;
+  }
+
+  :link
+  :visited
+  :hover
+  :active 
+
+  :disabled
+  :enabled
+
+  :checked
+  :indeterminate - this state is there for checkboxes, progress bars
+
+  :placeholder-shown - case when the placeholder does not have a value. 
+
+  :valid, :invalid, :in-range
+  :required :optional 
+
+
+  :first-child :last-child
+  :only-child
+  :first-of-type :last-of-type
+  :nth-child
+  :nth-of-type
+  :only-of-type
+
+
+  :empty - if an element has no children 
+
+  :is
+  .post :is(h2, li, img) {
+      …
+  }
+  :not 
+  img:not([alt]){
+  }
+
+  :is() and :not() are functional psuedo classes.
+   */

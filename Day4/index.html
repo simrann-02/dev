@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent .child1 {
+        color: red;
+      }
+      .parent.child2 {
+        color: pink;
+      }
+      .video::backdrop {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- trying combinators -->
+    <div class="parent">
+      <p class="child1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti illo
+        voluptatum distinctio soluta repellendus quos delectus non sequi iusto,
+        saepe eius officia, consequuntur totam debitis?
+      </p>
+      <div class="parent child2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero delectus
+        distinctio voluptas non ullam tempora nesciunt ratione ab hic sint.
+        <p class="child1">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, iure.
+        </p>
+      </div>
+      <p class="child3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem iure est
+        porro voluptates ab nostrum a tempore deleniti quos animi?
+      </p>
+    </div>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/KShnPYN-voI"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      class="video"
+    >
+    </iframe>
+  </body>
+</html>
