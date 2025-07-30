@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 300px;
+        text-align: center;
+      }
+
+      td {
+        border-width: 6px;
+        border-color: black;
+        padding: 10px;
+      }
+
+      .inset {
+        border-style: inset;
+      }
+
+      .outset {
+        border-style: outset;
+      }
+
+      .separate-table {
+        border-collapse: separate;
+        border-spacing: 10px;
+      }
+
+      caption {
+        margin: 1em 0;
+        font-weight: bold;
+      }
+      .parent {
+        position: relative;
+        top: 10px;
+      }
+      .child {
+        position: absolute;
+        top: 100px;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <span style="margin: 20px">Checking inline elements</span>
+    <table>
+      <caption>
+        With border-collapse: collapse
+      </caption>
+      <tr>
+        <td class="inset">Inset</td>
+        <td class="outset">Outset</td>
+      </tr>
+    </table>
+
+    <table class="separate-table">
+      <caption>
+        With border-collapse: separate
+      </caption>
+      <tr>
+        <td class="inset">Inset</td>
+        <td class="outset">Outset</td>
+      </tr>
+    </table>
+
+    <div class="parent">
+      <p>Some content here</p>
+      <div class="child">Another part of content here</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+
+/* 
+CASCADE AND SPECIFICITY
+
+The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. 
+
+Specificity/ priority in css selectors -
+ID > class > element
+
+each selector has specificity points which means if a selector is more specific, it is difficult to override it. It is recommended to keep your css as simple as possible to allow overrides in future. 
+
+order of specificity of origins (least->most)-
+1. user agent base styles
+2. local user styles
+3. authored css
+4. authored important css
+5. local user important css
+6. user agent important css
+
+
+The order of importance, from least important, to most important is as follows:
+
+normal rule type, such as font-size, background or color
+animation rule type
+!important rule type (following the same order as origin)
+transition rule type
+Active animation and transition rule types have higher importance than normal rules. In the case of transitions higher importance than !important rule types. This is because when an animation or transition becomes active, its expected behaviour is to change visual state.
+
+
+specificity scores - A-B-C
+A- id like specificity
+B- class like specificity
+C- element like specificity 
+
+If two selectors having tie at A level, will move to B, another tie would move to C level. 
+
+A universal selector (*) adds no specificity, leaving its value at the initial specificity of (0,0,0).
+
+the :not() pseudo-class itself adds nothing to the specificity calculation.
+
+However, the selectors passed in as arguments do get added to the specificity calculation.
+div:not(.my-class) {
+  color: red;
+}
+
+The :where() pseudo-class is different. No matter the specificity of any of its arguments, it always has a specificity of (0,0,0).
+:where(h1, h2, h3, #my-heading) {
+  color: blue;
+}
+
+CSS applied directly to the style attribute of an element, does not affect specificity as it's a different step in the cascade that is evaluated before specificity.
+
+When two declarations are !important, then the specificity comes in play again, as the origin step from the cascade was not able to determine the winner yet.
+
+
+
+INHERITANCE -
+
+unset vs initial vs inherit - unset property sets the property to inherit if it isinherited by default,otherwise to initial. 
+inheritance only applies to direct children. 
+
+
+COLORS-
+1. Named colors
+2. Numeric colors
+3. rgb
+4. hsla
+
+SIZING UNITS-
+1. ch -characters
+2. numbers - used for line height(ratio), opacity,rgb values etc
+3. percentage - width,margins(parent width), transform(element width)
+4. Relative Units - em,rem - relative to parent, relative to root.
+
+
+LAYOUT- display->inline,block,inline-block.
+        flex
+        grid
+        multicolumn layout
+        position - relative, absolute, fixed, sticky, static(default)
+
+        relative - it is relative to itself
+        absolute - to its most closest relative element 
+        fixed - similar to absolute, with its parent being the root element 
+
+ */
