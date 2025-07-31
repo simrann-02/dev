@@ -1,0 +1,22 @@
+/* sticky vs fixed */
+
+/* sticky remains within the parent container, that is, once the parent container moves out of sight, the sticky element does so as well. It is  a part of the document flow */
+/* Fixed element moves out of the document flow. So it remains in the position intact even when the parent container goes out of sight. It is basically referenced from the viewport */
+
+
+/* FLEXBOX */
+
+/* justify-content : default: flex-start
+other values : center, space-between,space-around, flex-start, flex-end
+ */
+/* align-items: default: strech 
+other values : center, flex-start, flex-end, baseline - this will set all the items text to align with the largest item text in the list of items
+flex-wrap
+align-content
+
+*/
+/* Child properties
+1. align-self : flex-start, 
+2. flex-grow : 1 --> set the items to take up all the container space equally
+3. flex: flex-grow flex-shrink flex-basis
+ */
