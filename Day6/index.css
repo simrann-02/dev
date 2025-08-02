@@ -19,4 +19,23 @@ align-content
 1. align-self : flex-start, 
 2. flex-grow : 1 --> set the items to take up all the container space equally
 3. flex: flex-grow flex-shrink flex-basis
+
+flex: 1; -> this will set the item to take up all the space equally
+this means -> 
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0; 
+
+
+flex:0/flex:none/flex:initial; -> this will set the item to not take up any space, it will shrink to its content size
+this means ->
+flex-grow: 0;
+flex-shrink: 1;
+flex-basis: auto;
+
+flex: auto -> Using flex: auto will mean that items end up different sizes, as the space that is shared between the items is shared out after each item is laid out as max-content size. So a large item will gain more space.  
+this means ->   
+flex-grow: 1;
+flex-shrink: 1;   
+flex-basis: auto;
  */
