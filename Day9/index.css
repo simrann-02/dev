@@ -1,0 +1,47 @@
+/* Logical properties */
+
+/*
+1. margin --> margin-block-start,margin-block-end, margin-inline-start, margin-inline-end. 
+
+2. min-height/min-width -->
+max-block-size,max-inline-size
+
+3. top/bottom/left/right -->
+block-start, block-end, inline-start, inline-end. 
+
+4. padding, margin -->margin-inline-start, padding-inline-start, so on. 
+
+
+5. vw, vh --> vi, vb
+
+
+*/
+
+
+/* Transform property */
+/*
+transform: rotate()
+transform: scale()
+
+.my-element {
+  transform: translatex(40px) translatey(25px);
+}
+  .my-element {
+  transform: skew(10deg);
+}
+  perspective property - changes the distance between the z plane and the user. 
+ */
+
+ /* gradients
+ 1. Linear gradient 
+ 2. Radial gradient 
+ 3. Conic gradient
+ */
+
+ /* Animations 
+
+  */
+
+  /* Transition 
+  Like most CSS properties, there is a shorthand version. transition combines transition-property, transition-duration, transition-timing-function, and transition-delay.
+   */
