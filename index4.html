@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .piechart {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: conic-gradient(#f44336 var(--percentage, 0%), white 0);
+        position: relative;
+      }
+      .piechart::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="piechart" style="--percentage: 20%"></div>
+  </body>
+</html>
